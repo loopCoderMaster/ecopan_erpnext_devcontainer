@@ -17,7 +17,9 @@ apt-get install -y \
 source /home/frappe/.nvm/nvm.sh
 nvm alias default 18
 nvm use 18
-echo "nvm use 18" >> ~/.bashrc
+#echo "nvm use 18" >> ~/.bashrc
+
+rm -rf ./installer.py
 
 # Scarica e installa lo script di installazione di Frappe
 wget https://raw.githubusercontent.com/frappe/frappe_docker/main/development/installer.py
@@ -36,8 +38,8 @@ chmod +x installer.py
 sudo chown -R frappe:frappe /workspace/development/frappe-bench
 
 # Avvia i bench di Frappe
-cd /workspace/development/frappe-bench
-bench start
+#cd /workspace/development/frappe-bench
+#bench start
 
 # Output finale
 echo "Installazione completata. Frappe ed ERPNext dovrebbero essere in esecuzione."
