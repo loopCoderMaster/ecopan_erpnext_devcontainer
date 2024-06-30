@@ -20,11 +20,11 @@ echo "nvm use 18" >> ~/.bashrc
 # Scarica e installa lo script di installazione di Frappe
 wget https://raw.githubusercontent.com/frappe/frappe_docker/main/development/installer.py
 
-#echo "[]" > apps-example.json
+echo "[]" > apps-example.json
 # Crea il file apps-example.json (includi Frappe ed ERPNext)
-echo "[
-  { \"url\": \"https://github.com/frappe/erpnext.git\", \"branch\": \"version-15\" }
-]" > apps-example.json
+#echo "[
+#  { \"url\": \"https://github.com/frappe/erpnext.git\", \"branch\": \"version-15\" }
+#]" > apps-example.json
 
 chmod +x installer.py
 # Esegui lo script di installazione di Frappe
