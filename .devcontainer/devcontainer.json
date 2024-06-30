@@ -2,11 +2,6 @@
   "name": "Frappe Bench",
   "forwardPorts": [8000, 9000, 6787],
   "remoteUser": "frappe",
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "latest"
-    }
-  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -17,9 +12,8 @@
         "visualstudioexptteam.vscodeintellicode"
       ],
       "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash",
-        "python.defaultInterpreterPath": "/usr/bin/python3",
-        "debug.node.autoAttach": "disabled"
+       "terminal.integrated.defaultProfile.linux": "bash",
+       "debug.node.autoAttach": "disabled"
       }
     }
   },
