@@ -32,10 +32,10 @@ chmod +x installer.py
 ./installer.py --verbose  # Aggiungi --verbose per vedere l'output dettagliato
 
 # Imposta i permessi corretti dopo l'installazione
-sudo chown -R frappe:frappe /home/frappe/benches
+sudo chown -R frappe:frappe /workspace/development/frappe-bench
 
 # Avvia i bench di Frappe
-cd /home/frappe/benches/frappe-bench
+cd /workspace/development/frappe-bench
 bench start
 
 # Output finale
