@@ -31,11 +31,11 @@ chmod +x installer.py
 ./installer.py # Aggiungi --verbose per vedere l'output dettagliato
 
 # Imposta i permessi corretti dopo l'installazione
-sudo chown -R frappe:frappe /workspace/development/frappe-bench
+#sudo chown -R frappe:frappe /workspace/development/frappe-bench
 
 # Avvia i bench di Frappe
-cd /workspace/development/frappe-bench
-bench start
+#cd /workspace/development/frappe-bench
+#bench start
 
 # Output finale
 echo "Installazione completata. Frappe ed ERPNext dovrebbero essere in esecuzione."
