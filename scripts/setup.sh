@@ -12,10 +12,10 @@ apt-get install -y \
     #python3-pip \
     #build-essential 
 
-#source /home/frappe/.nvm/nvm.sh
-#nvm alias default 18
-#nvm use 18
-#echo "nvm use 18" >> ~/.bashrc
+source /home/frappe/.nvm/nvm.sh
+nvm alias default 18
+nvm use 18
+echo "nvm use 18" >> ~/.bashrc
 
 # Scarica e installa lo script di installazione di Frappe
 wget https://raw.githubusercontent.com/frappe/frappe_docker/main/development/installer.py
