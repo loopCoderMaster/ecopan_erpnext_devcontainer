@@ -23,6 +23,7 @@
         "ms-python.python",
         "ms-vscode.live-server",
         "mtxr.sqltools",
+        "mtxr.sqltools-driver-mysql",
         "visualstudioexptteam.vscodeintellicode"
       ],
       "settings": {
