@@ -3,16 +3,6 @@
   "forwardPorts": [8000, 9000, 6787],
   "remoteUser": "frappe",
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "latest",
-      "installPip": "true"
-    },
-    "ghcr.io/devcontainers/features/git:1": {
-      "version": "latest"
-    },
-    "ghcr.io/devcontainers/features/common-utils:1": {
-      "version": "latest"
-    },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "latest"
     }
