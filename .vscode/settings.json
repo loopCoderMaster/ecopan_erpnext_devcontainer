@@ -3,16 +3,17 @@
     "debug.node.autoAttach": "disabled",
     "sqltools.connections": [
         {
+            "name": "FrappeDb",
+            "server": "mariadb",
+            "driver": "MariaDB",
+            "port": 3306,
+            "username": "root",
+            "askForPassword": false,
+            "password": "123",
+            "connectionTimeout": 15,
             "mysqlOptions": {
                 "authProtocol": "default"
-            },
-            "previewLimit": 50,
-            "server": "mariadb",
-            "port": 3306,
-            "driver": "MariaDB",
-            "name": "MariaDB",
-            "username": "root",
-            "password": "123"
+            }            
         }
     ]
 }
