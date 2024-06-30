@@ -1,49 +1,43 @@
 {
-   "name":"Frappe Bench",
-   "forwardPorts":[
-      8000,
-      9000,
-      6787
-   ],
-   "remoteUser":"frappe",
-   "features":{
-      "ghcr.io/devcontainers/features/python:1":{
-         "version":"latest",
-         "installPip":"true"
-      },
-      "ghcr.io/devcontainers/features/git:1":{
-         "version":"latest"
-      },
-      "ghcr.io/devcontainers/features/node:1":{
-         "version":"latest"
+  "name": "Frappe Bench",
+  "forwardPorts": [8000, 9000, 6787],
+  "remoteUser": "frappe",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "latest",
+      "installPip": "true"
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/common-utils:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.live-server",
+        "mtxr.sqltools",
+        "visualstudioexptteam.vscodeintellicode"
+      ],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "debug.node.autoAttach": "disabled"
       }
-   },
-   "customizations":{
-      "vscode":{
-         "extensions":[
-            "ms-python.python",
-            "ms-vscode.live-server",
-            "grapecity.gc-excelviewer",
-            "mtxr.sqltools",
-            "visualstudioexptteam.vscodeintellicode"
-         ],
-         "settings":{
-            "terminal.integrated.profiles.linux":{
-               "frappe_bash":{
-                  "path":"/bin/bash"
-               }
-            },
-            "terminal.integrated.defaultProfile.linux":"frappe_bash",
-            "debug.node.autoAttach":"disabled"
-         }
-      }
-   },
-   "dockerComposeFile":"./docker-compose.yml",
-   "service":"frappe",
-   "workspaceFolder":"/workspace/development",
-   "shutdownAction":"stopCompose",
-   "postCreateCommand":"bash /workspace/scripts/setup.sh",
-   "mounts":[
-      "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/frappe/.ssh,type=bind,consistency=cached"
-   ]
+    }
+  },
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "frappe",
+  "workspaceFolder": "/workspace/development",
+  "shutdownAction": "stopCompose",
+  "postCreateCommand": "bash /workspace/scripts/setup.sh",
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/frappe/.ssh,type=bind,consistency=cached"
+  ]
 }
