@@ -13,7 +13,21 @@
       ],
       "settings": {
        "terminal.integrated.defaultProfile.linux": "bash",
-       "debug.node.autoAttach": "disabled"
+       "debug.node.autoAttach": "disabled",
+       "extensions.verifySignature": false,
+       "sqltools.connections": [{
+            "name": "FrappeDb",
+            "server": "mariadb",
+            "driver": "MariaDB",
+            "port": 3306,
+            "username": "root",
+            "askForPassword": false,
+            "password": "123",
+            "connectionTimeout": 15,
+            "mysqlOptions": {
+                "authProtocol": "default"
+            }
+       }]
       }
     }
   },
@@ -21,8 +35,5 @@
   "service": "frappe",
   "workspaceFolder": "/workspace/development",
   "shutdownAction": "stopCompose",
-  "postCreateCommand": "bash /workspace/scripts/setup.sh",
-  "mounts": [
-    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/frappe/.ssh,type=bind,consistency=cached"
-  ]
+  "postCreateCommand": "bash /workspace/scripts/setup.sh"
 }
