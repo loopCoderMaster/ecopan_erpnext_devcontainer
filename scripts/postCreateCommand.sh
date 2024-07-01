@@ -31,6 +31,16 @@ bench --site development.localhost clear-cache
 
 echo "Starting Frappe development server..."
 bench use development.localhost
-#bench browse
 
 echo "Frappe development server avviato. Apri http://localhost:8000 nel tuo browser."
+
+lines=(
+    "Frappe development server avviato."
+    "Segui questi passaggi per accedere:"
+    "1. Apri il terminale di VS Code."
+    "2. Esegui il comando: cd frappe-bench"
+    "3. Esegui il comando: bench start"
+    "4. Clicca su link sul terminale http://127.0.0.1:8000 e si aprirà sul tuo browser il sito."
+    "5. Accedi con l'utente Administrator e la password admin."
+)
+printf '%s\n' "${lines[@]}"
