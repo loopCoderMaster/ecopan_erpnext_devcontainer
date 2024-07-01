@@ -1,19 +1,4 @@
 {
     "python.defaultInterpreterPath": "${workspaceFolder}/frappe-bench/env/bin/python",
-    "debug.node.autoAttach": "disabled",
-    "sqltools.connections": [
-        {
-            "name": "FrappeDb",
-            "server": "mariadb",
-            "driver": "MariaDB",
-            "port": 3306,
-            "username": "root",
-            "askForPassword": false,
-            "password": "123",
-            "connectionTimeout": 15,
-            "mysqlOptions": {
-                "authProtocol": "default"
-            }            
-        }
-    ]
+    "debug.node.autoAttach": "disabled"
 }
