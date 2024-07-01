@@ -53,7 +53,7 @@ services:
       - SHELL=/bin/bash
     volumes:
       - ..:/workspace:cached
-      - ./.vscode:/workspace/development/.vscode:cached
+      - ./.vscode:/workspace/development/.vscode
       # Enable if you require git cloning
       #- ${HOME}/.ssh:/home/frappe/.ssh
     working_dir: /workspace/development
