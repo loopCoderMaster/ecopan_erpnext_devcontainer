@@ -53,5 +53,5 @@
       "source=${localWorkspaceFolder}/.vscode,target=/workspace/development/.vscode,type=bind"
     ],
     "shutdownAction": "stopCompose",
-    "postCreateCommand": "bash /workspace/development/scripts/postCreateCommand.sh"
+    "postCreateCommand": "bash /workspace/scripts/postCreateCommand.sh"
 }
