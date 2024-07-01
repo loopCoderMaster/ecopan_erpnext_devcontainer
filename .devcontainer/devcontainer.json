@@ -29,7 +29,6 @@
          "terminal.integrated.defaultProfile.linux": "bash",
          "debug.node.autoAttach": "disabled",
          "extensions.verifySignature": false,
-         "editor.formatOnSave": true,
          "sqltools.connections": [{
               "name": "FrappeDb",
               "server": "mariadb",
