@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo "Start postCreateCommand.sh script."
 
 # Scarica e installa lo script di installazione di Frappe
