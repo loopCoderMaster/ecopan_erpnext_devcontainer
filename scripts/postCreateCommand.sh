@@ -14,9 +14,9 @@ apt-get install -y \
     #python3-pip \
     #build-essential 
 
-source /home/frappe/.nvm/nvm.sh
-nvm alias default 18
-nvm use 18
+#source /home/frappe/.nvm/nvm.sh
+#nvm alias default 18
+#nvm use 18
 #echo "nvm use 18" >> ~/.bashrc
 
 # Scarica e installa lo script di installazione di Frappe
@@ -37,7 +37,9 @@ rm installer.py apps-example.json
 if [ $? -eq 0 ]; then  # Verifica se l'installer è terminato con successo (codice di uscita 0)
     sudo chown -R frappe:frappe /workspace/development/frappe-bench
     cd /workspace/development/frappe-bench
-    #bench start
+    bench --site development.localhost clear-cache
+    bench use development.localhost
+    bench browse
     echo "Installazione completata. Frappe ed ERPNext dovrebbero essere in esecuzione."
 else
     echo "Errore durante l'installazione. I file temporanei non sono stati rimossi."
