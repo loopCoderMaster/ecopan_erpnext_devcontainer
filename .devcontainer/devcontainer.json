@@ -1,1 +1,57 @@
-
+{
+    "name": "Frappe Bench",
+    "forwardPorts": [8000, 9000, 6787],
+    "portsAttributes": {
+      "8000": {
+        "label": "Frappe Web",
+        "onAutoForward": "openPreview" // Apre una finestra di anteprima in VS Code
+      },
+      "9000": {
+        "label": "Frappe Worker",
+        "onAutoForward": "notify" // Mostra una notifica quando la porta è inoltrata
+      },
+      "6787": { 
+        "label": "Node Inspector",
+        "onAutoForward": "silent" // Inoltra la porta senza notifiche
+      }
+    },
+    "remoteUser": "frappe",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-vscode.live-server",
+          "mtxr.sqltools",
+          "mtxr.sqltools-driver-mysql",
+          "visualstudioexptteam.vscodeintellicode"
+        ],
+        "settings": {
+         "terminal.integrated.defaultProfile.linux": "bash",
+         "debug.node.autoAttach": "disabled",
+         "extensions.verifySignature": false,
+         "editor.formatOnSave": true,
+         "sqltools.connections": [{
+              "name": "FrappeDb",
+              "server": "mariadb",
+              "driver": "MariaDB",
+              "port": 3306,
+              "username": "root",
+              "askForPassword": false,
+              "password": "123",
+              "connectionTimeout": 15,
+              "mysqlOptions": {
+                  "authProtocol": "default"
+              }
+         }]
+        }
+      }
+    },
+    "dockerComposeFile": "./docker-compose.yml",
+    "service": "frappe",
+    "workspaceFolder": "/workspace/development",
+    "mounts": [
+      "source=${localWorkspaceFolder}/.vscode,target=/workspace/development/.vscode,type=bind"
+    ],
+    "shutdownAction": "stopCompose",
+    "postCreateCommand": "bash ./scripts/postCreateCommand.sh"
+  }
