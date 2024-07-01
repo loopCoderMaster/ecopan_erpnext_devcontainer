@@ -33,7 +33,7 @@ chmod +x installer.py
 ./installer.py # Aggiungi --verbose per vedere l'output dettagliato
 
 # Rimuovi i file temporanei
-#rm installer.py apps-example.json
+rm installer.py apps-example.json
 
 # Imposta i permessi corretti dopo l'installazione
 sudo chown -R frappe:frappe /workspace/development/frappe-bench
