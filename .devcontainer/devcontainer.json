@@ -1,6 +1,20 @@
 {
   "name": "Frappe Bench",
   "forwardPorts": [8000, 9000, 6787],
+  "portsAttributes": {
+    "8000": {
+      "label": "Frappe Web",
+      "onAutoForward": "openPreview" // Apre una finestra di anteprima in VS Code
+    },
+    "9000": {
+      "label": "Frappe Worker",
+      "onAutoForward": "notify" // Mostra una notifica quando la porta è inoltrata
+    },
+    "6787": { 
+      "label": "Node Inspector",
+      "onAutoForward": "silent" // Inoltra la porta senza notifiche
+    }
+  },
   "remoteUser": "frappe",
   "customizations": {
     "vscode": {
@@ -15,6 +29,7 @@
        "terminal.integrated.defaultProfile.linux": "bash",
        "debug.node.autoAttach": "disabled",
        "extensions.verifySignature": false,
+       "editor.formatOnSave": true,
        "sqltools.connections": [{
             "name": "FrappeDb",
             "server": "mariadb",
