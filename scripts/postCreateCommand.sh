@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Start setup.sh !!!!"
+echo "Start postCreateCommand.sh script."
 
 # Scarica e installa lo script di installazione di Frappe
 wget https://raw.githubusercontent.com/frappe/frappe_docker/main/development/installer.py
@@ -29,10 +29,8 @@ cd /workspace/development/frappe-bench
 echo "Clearing cache and setting site..."
 bench --site development.localhost clear-cache
 
-echo "Starting Frappe development server..."
+echo "se development.localhost..."
 bench use development.localhost
-
-echo "Frappe development server avviato. Apri http://localhost:8000 nel tuo browser."
 
 lines=(
     "Frappe development server avviato."
