@@ -32,17 +32,13 @@ chmod +x installer.py
 # Esegui lo script di installazione di Frappe
 ./installer.py # Aggiungi --verbose per vedere l'output dettagliato
 
-# Rimuovi i file temporanei
 rm installer.py apps-example.json
 
-# Imposta i permessi corretti dopo l'installazione
-sudo chown -R frappe:frappe /workspace/development/frappe-bench
-
-cd /workspace/development/frappe-bench
-
-# Avvia i bench di Frappe
-#cd /workspace/development/frappe-bench
-#bench start
-
-# Output finale
-echo "Installazione completata. Frappe ed ERPNext dovrebbero essere in esecuzione."
+if [ $? -eq 0 ]; then  # Verifica se l'installer è terminato con successo (codice di uscita 0)
+    sudo chown -R frappe:frappe /workspace/development/frappe-bench
+    cd /workspace/development/frappe-bench
+    #bench start
+    echo "Installazione completata. Frappe ed ERPNext dovrebbero essere in esecuzione."
+else
+    echo "Errore durante l'installazione. I file temporanei non sono stati rimossi."
+fi
