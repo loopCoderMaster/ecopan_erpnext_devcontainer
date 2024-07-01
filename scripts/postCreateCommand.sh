@@ -28,6 +28,10 @@ rm installer.py apps-example.json
 sudo chown -R frappe:frappe /workspace/development/frappe-bench
 cd /workspace/development/frappe-bench
 
+echo "Installing ERPNext..."
+bench get-app --branch version-15 --resolve-deps erpnext
+bench --site development.localhost install-app erpnext
+
 echo "Clearing cache and setting site..."
 bench --site development.localhost clear-cache
 
