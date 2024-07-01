@@ -19,23 +19,26 @@ nvm alias default 18
 nvm use 18
 #echo "nvm use 18" >> ~/.bashrc
 
-rm -rf ./installer.py
-
 # Scarica e installa lo script di installazione di Frappe
 wget https://raw.githubusercontent.com/frappe/frappe_docker/main/development/installer.py
 
-echo "[]" > apps-example.json
+#echo "[]" > apps-example.json
 # Crea il file apps-example.json (includi Frappe ed ERPNext)
-#echo "[
-#  { \"url\": \"https://github.com/frappe/erpnext.git\", \"branch\": \"version-15\" }
-#]" > apps-example.json
+echo "[
+  { \"url\": \"https://github.com/frappe/erpnext.git\", \"branch\": \"version-15\" }
+]" > apps-example.json
 
 chmod +x installer.py
 # Esegui lo script di installazione di Frappe
 ./installer.py # Aggiungi --verbose per vedere l'output dettagliato
 
+# Rimuovi i file temporanei
+rm installer.py apps-example.json
+
 # Imposta i permessi corretti dopo l'installazione
 sudo chown -R frappe:frappe /workspace/development/frappe-bench
+
+cd /workspace/development/frappe-bench
 
 # Avvia i bench di Frappe
 #cd /workspace/development/frappe-bench
