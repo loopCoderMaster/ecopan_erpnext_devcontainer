@@ -49,7 +49,8 @@
     "service": "frappe",
     "workspaceFolder": "/workspace/development",
     "mounts": [
-      "source=${localWorkspaceFolder}/.vscode,target=/workspace/development/.vscode,type=bind"
+      "source=${localWorkspaceFolder}/.vscode,target=/workspace/development/.vscode,type=bind",
+      "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/frappe/.ssh,type=bind,consistency=cached"  
     ],
     "shutdownAction": "stopCompose",
     "postCreateCommand": "bash /workspace/scripts/postCreateCommand.sh"
