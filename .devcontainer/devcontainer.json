@@ -4,7 +4,7 @@
     "portsAttributes": {
       "8000": {
         "label": "Frappe Web",
-        "onAutoForward": "openPreview" // Apre una finestra di anteprima in VS Code
+        "onAutoForward": "openBrowser" // The port will be opened in the system’s default browser
       },
       "9000": {
         "label": "Frappe Worker",
