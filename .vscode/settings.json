@@ -1,4 +1,5 @@
 {
     "python.defaultInterpreterPath": "${workspaceFolder}/frappe-bench/env/bin/python",
-    "debug.node.autoAttach": "disabled"
+    "debug.node.autoAttach": "disabled",
+    "github-enterprise.uri": "https://github.com/techloopsrl"
 }
