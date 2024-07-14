@@ -5,7 +5,7 @@
 1. Git -> https://git-scm.com/downloads
 2. Azure CLI -> https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
 3. Powershell -> https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4
-   AND/OR 
+   AND/OR<br/> 
    Windows Terminal -> https://github.com/microsoft/terminal
 5. DevPod -> https://github.com/loft-sh/devpod
 6. Azure auth on Techloop subscription
@@ -38,11 +38,12 @@ Frappe Site Running through Codespace
 ![image](https://github.com/techloopsrl/ecopandevcontainer/assets/132823027/125d418f-e2a7-4ba1-b71f-61700b7c95ec)
 
 ## Credentials
-For the Frappe site created by default use Administrator and admin as username and password respectively.
-MariaDB Root Password: 123
+For the Frappe site created by default:<br/>
+a. use Administrator and admin as username and password respectively<br/>
+b. MariaDB: Root Password: 123<br/>
 
-
-2. Esegui il comando: cd frappe-bench
-3. Esegui il comando: bench start
-4. Clicca su link sul terminale http://127.0.0.1:8000 e si aprirà sul tuo browser il sito.
+### STEPS
+1. Esegui il comando: cd frappe-bench
+2. Esegui il comando: bench start
+3. Clicca su link sul terminale http://127.0.0.1:8000 e si aprirà sul tuo browser il sito.
 5. Accedi con l'utente Administrator e la password admin.
