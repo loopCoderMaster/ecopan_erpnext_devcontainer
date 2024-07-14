@@ -5,7 +5,7 @@
 1. Git -> https://git-scm.com/downloads
 2. Azure CLI -> https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
 3. Powershell -> https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4
-   AND/OR<br/> 
+   <br/>AND/OR<br/> 
    Windows Terminal -> https://github.com/microsoft/terminal
 5. DevPod -> https://github.com/loft-sh/devpod
 6. Azure auth on Techloop subscription
