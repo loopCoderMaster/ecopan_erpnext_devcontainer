@@ -2,7 +2,14 @@
 
 ## DevPod
 
-https://github.com/loft-sh/devpod
+### Requirements
+
+1. Git -> https://git-scm.com/downloads
+2. Azure CLI -> https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
+3. Powershell -> https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4 or Windows Terminal -> https://github.com/microsoft/terminal
+4. DevPod -> https://github.com/loft-sh/devpod
+5. Azure auth on Techloop subscription
+6. Github auth on Techloop
 
 ![image](https://raw.githubusercontent.com/loft-sh/devpod/main/docs/static/media/devpod-flow.gif)
 
